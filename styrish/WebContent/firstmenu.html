@@ -1,0 +1,337 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/bootstrap.min.css"><link rel="stylesheet" href="css/animate.css">
+
+ <link href="css/font-awesome.css" rel="stylesheet">
+ <link rel="stylesheet" href="css/style.css">
+ <link rel="stylesheet" href="css/explore.css">
+ <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ <script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/tooltip.js"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <style>
+.mega{box-shadow:0 0 5px grey;}
+
+ </style>
+ 
+ </head>
+ 
+ <body>
+<!-- Menu -->
+<nav class=""  style="margin:0 0 1px 0;padding:0;border:none;" id="firstmenu1" >
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <span class="webname"><img src="img/logop.png" style="width:110px;height:auto"></span>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar" >
+      <ul class="nav navbar-nav" style="background" >
+		
+		 <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="" >ALL EXAMS <span class="caret"></span></a>
+			<ul class="dropdown-menu" style="margin-left:-100px">
+				 <li  >
+<section class="container" >
+ 
+<div class="row"> 
+  <div class="col-md-3">
+	<h4 class="w3-bar-item " style="background:white" onclick="openCity('railways')">Railways</h4>
+	<h4 class="w3-bar-item" onclick="openCity('ssc')">SSC</h4>
+  </div>
+	<div class="col-md-9" >
+		<div id="railways" class="w3-container city" >
+			<h4 align="center">Railways</h4>
+			<div class="row" align="center">
+				<div class="col-md-3" >
+					<h2>Head 1</h2>
+					<a href="">1.1</a><br>
+					<a href="">1.2</a><br>
+							
+				</div>
+				<div class="col-md-3">
+					<h2>Head 2</h2>
+					<a href="">2.1</a><br>
+					<a href="">2.2</a><br>
+						
+				</div>
+				
+				<div class="col-md-3">
+					<h2>Head 3</h2>
+					<a href="">3.1</a><br>
+					<a href="">3.2</a><br>
+							
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-9" >
+		<div id="ssc" class="w3-container city" style="display:none">
+			<h4 align="center">SSC</h4>
+			<div class="row" align="center">
+				<div class="col-md-3" >
+					<h2>Head 1</h2>
+					<a href="">1.1</a><br>
+					<a href="">1.2</a><br>
+							
+				</div>
+				<div class="col-md-3">
+					<h2>Head 2</h2>
+					<a href="">2.1</a><br>
+					<a href="">2.2</a><br>
+							
+				</div>
+				
+				<div class="col-md-3">
+					<h2>Head 3</h2>
+					<a href="">3.1</a><br>
+					<a href="">3.2</a><br>
+						
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<script>
+function openCity(cityName) {
+  var i;
+  var x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  document.getElementById(cityName).style.display = "block";  
+}
+</script>			 
+				</li>
+			</ul>
+        </li>
+		
+		<li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="">STUDY MATERIAL<span class="caret"></span></a>
+			<ul class="dropdown-menu">
+				  <li><a href="#">demo1</a></li>
+				<li><a href="##">demo2</a></li>
+			</ul>
+        </li>
+		
+		 <!--      
+		<li class=""><a href="">About Us</a></li>
+		<li class=""><a href="">News</a></li>		
+		<li class=""><a href="">Contact Us</a></li>		
+		<li class=""><a href="">Register</a></li>		
+		<li class=""><a href="">Login</a></li>-->		
+      </ul>
+<ul class="nav navbar-nav navbar-right">
+<li class="dropdown">
+          <a style="background:white" class="dropdown-toggle btn" data-toggle="dropdown" href="">All<span class="caret"></span></a>
+			<ul class="dropdown-menu" style="margin-right:-100px">
+				  <li><a href="#">demo1</a></li>
+				<li><a href="##">demo2</a></li>
+			</ul>
+</li>
+<li class="dropdown" >
+	
+<div class="right-inner-addon" >
+	<i class="fa fa-search"></i>
+	<input type="text" class="form-control" placeholder="Search Video Course, Test Series and More.." style="width:400px">
+</div>
+
+</li>
+	  <li>&nbsp;&nbsp;&nbsp;<button type="button" class="btn loginbtn" data-toggle="modal" data-target="#myModal" style="margin-top:4%">Login/Signup</button></li>
+	  
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- /Menu -->
+ 
+<!--Menu For Mobile -->
+<section class="container" id="firstmenu2">
+<div class="row " >
+	<div class="col-xs-6 col-md-6 col-sm-6" align="left">
+		<span class="webname"><img src="img/logop.png" style="width:110px;height:auto"></span>
+	</div>
+	<div class="col-xs-6 col-md-6 col-sm-6" >
+		<button type="button" class="btn loginbtn" data-toggle="modal" data-target="#myModal" style="float:right;margin-top:2%">Login/Signup</button>
+	  
+	</div>
+	
+</div>
+</section>
+ 
+ 
+ 
+ 
+ 
+<!-- Pop Up Form-->		  
+<div class="container">
+  
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+		 <!-- <button type="button" class="close" data-dismiss="modal" >&times;</button>-->
+		  <i class="fa fa-times close" data-dismiss="modal" style="font-size: 40px"></i>
+          <h4 class="modal-title">Login</h4>
+        
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body " style="padding: 10%" >
+          <form>
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<button class="form-control btn btn-info " style="background:#4568B2;height:40px">
+					<i class="fa fa-facebook"></i>&nbsp;Continue with Facebook
+					</button>
+				</div>
+				<br><br><br>
+				
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<button class="form-control btn btn-default" style="height:40px;border:2px solid black">
+					<i class="fa fa-google"></i>&nbsp;Continue with Google
+					</button>
+				</div>
+				<br><br><br>
+				<div class="col-md-5 col-sm-5 col-xs-5" ></div>
+				<div class="col-md-2 col-sm-2 col-xs-2" align="center"><b>OR</b></div>
+				<div class="col-md-5 col-sm-5 col-xs-5"></div><br><br><br>
+				
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<input type="text" name="name" class="form-control" style="height:40px;" placeholder="Email">					
+				</div>
+				<br><br><br>
+				<div class="col-md-12 col-sm-12 col-xs-12 form-group has-feedback">
+					<input type="text" name="pass" class="form-control" style="height:40px;" placeholder="Password">
+	<br>
+<button type="button" class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#forget">Forgot?</button>			
+				</div>
+				
+				<br><br><br>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<button name="login" class="btn btn-warning form-control" style="height:40px;font-size:20px">Login</button>
+				</div>
+				
+				<br><br><br>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<p align="center" style="font-size:16px">Don't Have an Account?
+						<span ><a href="#" style="color: orange" data-dismiss="modal" data-toggle="modal" data-target="#sign">SIgn Up</a></span>
+					</p>
+				</div>
+			
+			</div>
+		  </form>
+        </div>
+        
+        <!-- Modal footer -->
+        <!--<div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>-->
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+<!-- Modal 2 forgot pass-->
+
+<div class="modal" id="forget" style="margin: auto">
+    <div class="modal-dialog">
+      <div class="modal-content">
+			<div class="modal-header">
+		<!--<button type="button" class="close" data-dismiss="modal">&times;</button>-->
+		 <i class="fa fa-times close" data-dismiss="modal" style="font-size: 40px"></i>
+          <h4 class="modal-title"><i class="fa fa-arrow-left" data-dismiss="modal" data-toggle="modal" data-target="#myModal"></i>&nbsp;&nbsp;Forget Password?</h4>
+          
+        </div>
+        
+        <!-- Modal body -->
+<div class="modal-body " style="padding: 10%" >
+    <form>
+		<div class="row">
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<p>	Enter the email address associated with your account, and we'll email you an OTP to verify it's you.</p>
+			</div>
+			<br><br><br>
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<input type="text" name="name" class="form-control" style="height:40px;" placeholder="Email">					
+			</div><br><br><br>				
+			<div class="col-md-12 col-sm-12 col-xs-12">
+				<button name="login" class="btn btn-warning form-control" style="height:40px;font-size:20px">Send OTP</button>
+			</div>
+		</div>
+	</form>
+</div>
+	</div>
+	</div>
+</div>
+<!-- Modal 3 Sign Up-->
+<div class="modal" id="sign" style="margin: auto">
+    <div class="modal-dialog">
+      <div class="modal-content">
+			<div class="modal-header">
+		 <i class="fa fa-times close" data-dismiss="modal" style="font-size: 40px"></i>
+		 <h4 class="modal-title"><i class="fa fa-arrow-left" data-dismiss="modal" data-toggle="modal" data-target="#myModal"></i>&nbsp;&nbsp;Sing Up</h4>
+         
+        </div>
+        
+        <!-- Modal body -->
+<div class="modal-body " style="padding: 10%" >
+          <form>
+			<div class="row">
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<button class="form-control btn btn-info " style="background:#4568B2;height:40px">
+					<i class="fa fa-facebook"></i>&nbsp;Continue with Facebook
+					</button>
+				</div>
+				<br><br><br>
+				
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<button class="form-control btn btn-default" style="height:40px;border:2px solid black">
+					<i class="fa fa-google"></i>&nbsp;Continue with Google
+					</button>
+				</div>
+				<br><br><br>
+				<div class="col-md-5 col-sm-5 col-xs-5" ></div>
+				<div class="col-md-2 col-sm-2 col-xs-2" align="center"><b>OR</b></div>
+				<div class="col-md-5 col-sm-5 col-xs-5"></div><br><br><br>
+				
+				<div class="col-md-12 col-sm-12 col-xs-12">
+				<button class="form-control btn btn-default" style="height:40px;border:2px solid orange;color:orange">
+					<i class="fa fa-google"></i>&nbsp;SignUp with Email
+					</button>
+				</div>
+				<br><br><br>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<button name="login" class="btn btn-warning form-control" style="height:40px;font-size:20px">Login</button>
+				</div>
+				
+				<br><br><br>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<p align="center" style="font-size:16px">Already Have an Account?
+						<span ><a href="#" style="color: orange" data-dismiss="modal" data-toggle="modal" data-target="#myModal">Login</a></span>
+					</p>
+				</div>
+			
+			</div>
+		  </form>
+        </div>
+  </div>
+    </div>
+  </div>
+  
+</div>
+
+
+</body>
+</html>

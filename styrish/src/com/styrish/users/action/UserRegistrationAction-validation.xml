@@ -1,0 +1,64 @@
+<!DOCTYPE validators PUBLIC "-//Apache Struts//XWork Validator 1.0.3//EN"
+        "http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+
+<validators>
+
+
+ <field name="firstName">
+        <field-validator type="requiredstring">
+            <message>You must enter Name</message>
+        </field-validator>
+    </field>
+    
+    
+    <field name="email">
+        <field-validator type="requiredstring">
+            <message>You must enter an e-mail address</message>
+        </field-validator>
+        <field-validator type="email">
+            <message>You must enter a valid e-mail address</message>
+        </field-validator>
+    </field>
+    
+    
+    <field name="mobile">
+    
+     <field-validator type="requiredstring">
+            <message>You must enter mobile number</message>
+        </field-validator>
+        <field-validator type="regex">
+             <param name="expression">^[0-9]{10}$</param>
+             <message>Mobile number must be of 10 digits</message>
+        </field-validator>
+  </field>
+
+    
+   
+    
+    
+    <field name="password">
+       <field-validator type="requiredstring">
+           <param name="trim">true</param>
+           <message>You must type password</message>
+       </field-validator>
+   </field>
+ 
+   <field name="confirmPassword">
+       <field-validator type="requiredstring">
+           <param name="trim">true</param>
+           <message>You must type confirm password</message>
+       </field-validator>
+   </field>
+   
+   <field name="role">
+       <field-validator type="requiredstring">
+           <param name="trim">true</param>
+           <message>You must select Teacher or Student</message>
+       </field-validator>
+   </field>
+    
+   <validator type="expression"> 
+       <param name="expression">password==confirmPassword</param>
+       <message>Confirm password must be equal to password</message>
+   </validator>
+</validators>

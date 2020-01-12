@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+    <defs>
+        <circle id="a" cx="50" cy="50" r="50"/>
+        <filter id="b" width="146.4%" height="128.1%" x="-23.2%" y="-13.5%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.701960784 0 0 0 0 0.325490196 0 0 0 0 0 0 0 0 0.3 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <linearGradient id="d" x1="100%" x2="0%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFAF00"/>
+            <stop offset="100%" stop-color="#F70"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="c" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="#FFF6EF" xlink:href="#a"/>
+        <g filter="url(#b)" mask="url(#c)">
+            <g transform="translate(22 18)">
+                <g transform="translate(5.148)">
+                    <path fill="#FC3A52" d="M23.37 32.148c12.887 0 22.297 4.072 22.297-8.815C45.667 10.447 36.257 0 23.37 0 10.484 0 1.074 10.447 1.074 23.333c0 12.887 9.41 8.815 22.296 8.815z"/>
+                    <path fill="url(#d)" d="M0 55.632c0-4.592 3.723-8.315 8.306-8.315h29.847c4.588 0 8.306 3.729 8.306 8.315v27.15H0v-27.15z" transform="translate(.037 3.148)"/>
+                    <path fill="#EBD08B" d="M13.943 46.795l7.238 8.582 2.017 6.626 2.367-6.667 7.264-8.59-1.324-1.394-16.26-.214z"/>
+                    <g transform="translate(4.218 3.148)">
+                        <ellipse cx="19.048" cy="18.376" fill="#1B2441" rx="18.584" ry="18.376"/>
+                        <path fill="#FBE3A7" d="M19.048 44.66c8.468 0 15.332-6.787 15.332-15.16v-7.694c0-4.25-16.375 6.402-22.304-8.943-5.194 6.664-8.36 6.763-8.36 8.99V29.5c0 8.372 6.865 15.16 15.332 15.16z"/>
+                        <path fill="#FBE3A7" d="M35.966 24.365c-1.824-1.158-4.611-.29-6.224 1.936-1.615 2.227-1.445 4.97.378 6.128 1.824 1.157 4.61.291 6.226-1.936 1.614-2.228 1.443-4.97-.38-6.128M2.12 24.365c1.825-1.158 4.612-.29 6.225 1.936 1.615 2.227 1.445 4.97-.379 6.128-1.824 1.157-4.61.291-6.225-1.936-1.614-2.228-1.444-4.97.38-6.128"/>
+                        <g fill="#1B2441" transform="translate(12.544 25.726)">
+                            <ellipse cx="1.394" cy="1.378" rx="1.394" ry="1.378"/>
+                            <ellipse cx="11.615" cy="1.378" rx="1.394" ry="1.378"/>
+                        </g>
+                    </g>
+                    <g fill="url(#d)" transform="translate(9.329 46.331)">
+                        <path d="M4.568.389l7.167 8.542-4.223 3.543L.345 3.932zM23.308.389l-7.167 8.542 4.223 3.543 7.167-8.542z"/>
+                    </g>
+                    <path stroke="#01579B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M21.088 55.216l2.277 7.194 2.08-7.194"/>
+                    <path stroke="#01579B" stroke-linecap="round" stroke-width="2.5" d="M23.267 61.95v10.363M8.54 68.382v17.1M38.2 68.382v17.1"/>
+                    <path fill="#FC3A52" d="M38.444 37.37V21.815a7.778 7.778 0 0 1 0 15.555zM7.978 37.37V21.815a7.778 7.778 0 1 0 0 15.555z"/>
+                    <path stroke="#FC3A52" stroke-width="2" d="M4.554 35.303v3.463a2.996 2.996 0 0 0 2.992 3.008H19.88"/>
+                    <circle cx="20.778" cy="41.519" r="2.074" fill="#FC3A52"/>
+                </g>
+                <path fill="#FFC7A1" d="M1.036 55.964a1.924 1.924 0 0 1 1.937-2.001H52.9c1.104 0 1.971.888 1.937 2.001l-.912 29.183a2.081 2.081 0 0 1-2.064 2.001H4.011a2.073 2.073 0 0 1-2.063-2.001l-.912-29.183z"/>
+                <circle cx="28" cy="71.593" r="4.148" fill="#FFFFFE"/>
+            </g>
+        </g>
+    </g>
+</svg>

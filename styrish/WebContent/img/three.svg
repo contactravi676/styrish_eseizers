@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" height="100" viewBox="0 0 100 100">
+    <defs>
+        <circle id="a" cx="50" cy="50" r="50"/>
+        <filter id="b" width="125.8%" height="127.6%" x="-12.9%" y="-13.8%" filterUnits="objectBoundingBox">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+            <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0.701960784 0 0 0 0 0.325490196 0 0 0 0 0 0 0 0 0.3 0"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <linearGradient id="d" x1="100%" x2="0%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFAF00"/>
+            <stop offset="100%" stop-color="#F70"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <mask id="c" fill="#fff">
+            <use xlink:href="#a"/>
+        </mask>
+        <use fill="#FFF6EF" xlink:href="#a"/>
+        <g filter="url(#b)" mask="url(#c)">
+            <path fill="#FFC7A1" d="M45.145 47l45.188 5.027s-2.139 28.92-7.18 29.3c-5.043.38-6.777-2.53-6.777-2.53s-6.056 8-14.752 8.183C52.928 87.162 41 86.044 41 86.044L45.145 47"/>
+            <path fill="url(#d)" d="M22 40c3.265-.142 17.649-1.507 21.333-6.15-4.349 1.32-8.015-1.85-8.015-1.85S29.321 39.21 22 40" transform="translate(41 47)"/>
+            <path fill="#FFC7A1" d="M2.562 17.339L46.745 6.607s7.881 27.908 3.274 29.99c-4.61 2.08-7.234-.06-7.234-.06s-2.954 9.589-11.064 12.735c-8.11 3.146-19.7 6.174-19.7 6.174L2.562 17.34"/>
+            <path fill="url(#d)" d="M22.667 40c3.264-.142 17.648-1.507 21.333-6.15-4.349 1.32-8.015-1.85-8.015-1.85s-5.997 7.21-13.318 8" transform="rotate(-20 52.52 13.157)"/>
+            <g>
+                <path fill="url(#d)" d="M45.89 50.73H0V5a5 5 0 0 1 5-5h39a2 2 0 0 1 2 2.005l-.11 48.726z" transform="translate(27 21)"/>
+                <path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M43 35.059h18M43 43.059h12"/>
+                <path fill="#FC3A52" d="M32.985 70.73H27V26a5 5 0 0 1 5-5h1l-.015 49.73z"/>
+                <path fill="#FFF" d="M27 70.73c0-3.313 2.689-6 5.99-6H73v9.004a3.004 3.004 0 0 1-3 2.997H32.99c-3.308 0-5.99-2.693-5.99-6z"/>
+            </g>
+        </g>
+    </g>
+</svg>

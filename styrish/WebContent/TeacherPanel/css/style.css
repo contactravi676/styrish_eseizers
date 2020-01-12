@@ -1,0 +1,350 @@
+
+
+	
+
+/*To do - remove duplicate styles for same class in media queries and try reuse that*/
+@media  screen and (max-width : 500px) {
+     .loginContainerDiv
+	{
+	background-color: #efefef;
+		color: #fff;
+		width: 90%;
+		padding: 7px;
+		overflow:hidden;
+		height: auto;
+		display:inline-block;
+		border: solid black 1px;
+		border-color:grey;
+		border-radius: 38px;
+		margin-top: 8%;
+		
+	}
+	
+	.myAccountContainerDiv
+	{
+	
+	background-color: #efefef;
+		color: #fff;
+		width: 90%;
+		padding: 7px;
+		overflow:hidden;
+		height: auto;
+		display:inline-block;
+		border: solid black 1px;
+		border-color:grey;
+		border-radius: 38px;
+		margin-top: 8%;
+		
+	
+	}
+	.myAccountContent
+	{
+	   width: 70%;
+	   color: black;
+	   font-weight: normal;
+	   margin-top: 2px;
+	   text-align: left;
+	   margin-left: 10%;
+	   font-family: Arial, Helvetica, sans-serif;
+	}
+	
+	.mainContainerDiv
+	{
+		background-color: #ffffff;
+		color: #fff;
+		width: auto;
+		margin: 0px auto;
+		padding: 5px;
+		overflow:hidden;
+		height: auto;
+		text-align: center;
+        
+	}
+	
+	
+	.glass,
+	.myAccountButtons
+	{
+	/* background styles */
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	background-color: blue; /*for compatibility with older browsers*/
+	background-image: linear-gradient(blue,lightblue);
+
+	/* text styles */
+	text-decoration: none;
+	color: #fff;
+	font-size: 15px;
+	font-family: sans-serif;
+	font-weight: 100;
+    }
+    
+    .myAccountButtons
+    {
+    padding: 4px 20px;
+    }
+	
+	
+	/*=============================== upload content mobile start====================*/
+	
+	 .uploadContentMainFormSection
+    {
+      width: 95%;
+      text-align: center;
+      margin-top: 5%;
+      /*display: flex;*/
+      height: 40%;
+    }
+    
+    .uploadContentMainFormItemsSection
+    {
+     width: 100%;
+     padding: 1%;
+     background-color: #fff;
+     height: 30%;
+     display: flex;
+    }
+    
+    .uploadContentMainFormUploadFileSection
+    {
+      background-color: #fff;
+      padding-top: 5%;
+      color: black;
+      display: flex;
+    }
+    
+     .uploadContentMainFormUploadFileNameTextSection
+    {
+     width: 72%;
+     margin-left: 5%;
+    }
+    
+     .uploadContentMainFormUploadButtonSection
+    {
+     width: 15%;
+    }
+    
+    .uploadContentMainFormUploadButtonSection input[type="file"]
+    {
+      padding: 5%;
+    }
+    
+    .uploadContentMainFormUploadButton,
+    .uploadContentMainFormApproveButton
+    {
+    background-color: #fff;
+    padding-top: 3%;
+    color: black;
+    text-align: center;
+    }
+    
+    .uploadContentMainFormApproveButton
+    {
+       display: none;
+    }
+    
+    .uploadContentFormContentDisplaySection
+    {
+       height: 380px;
+       width: 100%;
+       padding-top: 1%;
+       text-align: center
+    }
+    
+    .videoContentStyle
+    {
+       width:400px;
+       height:240px;
+    }
+    .iframeContentStyle
+    {
+      width: 95%;
+      height: 85%; 
+      overflow: auto;
+    }
+    
+    .applicationCopyRightSection
+    {
+       background-color: #fff;
+       padding-top: 10%;
+       color: black;
+    }
+    
+     /*==================== Upload Content page styling mobile -  end======================*/
+		
+	
+}
+
+@media  screen and (min-width : 980px) {
+     .loginContainerDiv
+	{
+		
+	background-color: #efefef;
+		color: #fff;
+		width: 40%;
+		padding: 7px;
+		overflow:hidden;
+		height: auto;
+		display:inline-block;
+		border: solid black 1px;
+		border-color:grey;
+		border-radius: 38px;
+		margin-top: 8%;
+		
+	}
+	
+	.myAccountContainerDiv
+	{
+	
+	background-color: #efefef;
+		color: #fff;
+		width: 35%;
+		padding: 7px;
+		overflow:hidden;
+		height: auto;
+		display:inline-block;
+		border: solid black 1px;
+		border-color:grey;
+		border-radius: 38px;
+		margin-top: 8%;
+		
+	
+	}
+	.myAccountContent
+	{
+	   width: 70%;
+	   color: black;
+	   font-weight: normal;
+	   margin-top: 2px;
+	   text-align: left;
+	   margin-left: 10%;
+	   font-family: Arial, Helvetica, sans-serif;
+	}
+	
+	.mainContainerDiv
+	{
+		background-color: #ffffff;
+		color: #fff;
+		width: auto;
+		margin: 0px auto;
+		padding: 5px;
+		overflow:hidden;
+		height: auto;
+		text-align: center;
+        
+	}
+	
+	
+	.glass,
+	.myAccountButtons
+	{
+	/* background styles */
+	position: relative;
+	display: inline-block;
+	padding: 15px 25px;
+	background-color: blue; /*for compatibility with older browsers*/
+	background-image: linear-gradient(blue,lightblue);
+
+	/* text styles */
+	text-decoration: none;
+	color: #fff;
+	font-size: 15px;
+	font-family: sans-serif;
+	font-weight: 100;
+    }
+    
+    .myAccountButtons
+    {
+    padding: 4px 20px;
+    }
+    
+    /*==================== Upload Content page styling desktop - start======================*/
+    
+    .uploadContentMainFormSection
+    {
+      width: 100%;
+      text-align: center;
+      margin-top: 5%;
+      display: flex;
+      height: 40%;
+    }
+    
+    .uploadContentMainFormItemsSection
+    {
+     width: 25%;
+     background-color: #fff;
+     height: 30%;
+     display: flex;
+    }
+    
+    .uploadContentMainFormUploadFileSection
+    {
+      background-color: #fff;
+      padding-top: 5%;
+      color: black;
+      display: flex;
+    }
+    
+     .uploadContentMainFormUploadFileNameTextSection
+    {
+      width: 30%;
+      margin-left: 20%;
+    }
+    
+     .uploadContentMainFormUploadButtonSection
+    {
+     width: 15%;
+    }
+    
+    .uploadContentMainFormUploadButtonSection input[type="file"]
+    {
+      padding: 5%;
+    }
+    
+    .uploadContentMainFormUploadButton,
+    .uploadContentMainFormApproveButton
+    {
+    background-color: #fff;
+    padding-top: 3%;
+    color: black;
+    text-align: center;
+    }
+    
+    .uploadContentMainFormApproveButton
+    {
+       display: none;
+    }
+    
+    .uploadContentFormContentDisplaySection
+    {
+       height: 500px;
+       width: 100%;
+       padding-top: 1%;
+       text-align: center
+    }
+    
+    .videoContentStyle
+    {
+       width:400px;
+       height:240px;
+    }
+    .iframeContentStyle
+    {
+      width: 45%;
+      height: 85%; 
+      overflow: auto;
+    }
+    
+    .applicationCopyRightSection
+    {
+       background-color: #fff;
+       padding-top: 10%;
+       color: black;
+    }
+    
+     /*==================== Upload Content page styling desktop -  end======================*/
+    
+    
+    
+}

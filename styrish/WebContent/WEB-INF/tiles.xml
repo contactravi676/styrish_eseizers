@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+  <definition name="baseLayout" template="/baseLayout.jsp">
+      <put-attribute name="title"  value="Template"/>
+      <put-attribute name="header" value="/header.jsp"/>
+      <put-attribute name="menu"   value="/menu.jsp"/>
+      <put-attribute name="body"   value="/body.jsp"/>
+      <put-attribute name="footer"   value="/footer.jsp"/>
+  </definition>
+  
+  
+  
+  <definition name="sectionVideo" template="/baseLayout.jsp">
+      <put-attribute name="title"  value="Template"/>
+      <put-attribute name="header" value="/header.jsp"/>
+      <put-attribute name="menu"   value="/menu.jsp"/>
+      <put-attribute name="body"   value="/section.jsp"/>
+      <put-attribute name="footer"   value="/footer.jsp"/>
+  </definition>
+  
+  <definition name="topicsVideo" template="/baseLayout.jsp">
+      <put-attribute name="title"  value="Template"/>
+      <put-attribute name="header" value="/header.jsp"/>
+      <put-attribute name="menu"   value="/menu.jsp"/>
+      <put-attribute name="body"   value="/topics_video.jsp"/>
+      <put-attribute name="footer"   value="/footer.jsp"/>
+  </definition>
+  
+  <definition name="topicsContent" template="/baseLayout.jsp">
+      <put-attribute name="title"  value="Template"/>
+      <put-attribute name="header" value="/header.jsp"/>
+      <put-attribute name="menu"   value="/menu.jsp"/>
+      <put-attribute name="body"   value="/topics_content.jsp"/>
+      <put-attribute name="footer"   value="/footer.jsp"/>
+  </definition>
+  
+  <definition name="topicsExamples" template="/baseLayout.jsp">
+      <put-attribute name="title"  value="Template"/>
+      <put-attribute name="header" value="/header.jsp"/>
+      <put-attribute name="menu"   value="/menu.jsp"/>
+      <put-attribute name="body"   value="/topics_examples.jsp"/>
+      <put-attribute name="footer"   value="/footer.jsp"/>
+  </definition>
+  
+  <definition name="topicsExercise" template="/baseLayout.jsp">
+      <put-attribute name="title"  value="Template"/>
+      <put-attribute name="header" value="/header.jsp"/>
+      <put-attribute name="menu"   value="/menu.jsp"/>
+      <put-attribute name="body"   value="/topics_exercise.jsp"/>
+      <put-attribute name="footer"   value="/footer.jsp"/>
+  </definition>
+  
+  
+  <definition name="courseUnits" extends="baseLayout">
+      <put-attribute name="title"  value="Courses"/>
+      <put-attribute name="body"   value="/welcome.jsp"/>      
+  </definition>
+  
+  <definition name="baseLayout_test" template="/baseLayout_test.jsp">
+      <put-attribute name="title"  value="Template"/>
+      <put-attribute name="header" value="/header.jsp"/>
+      <put-attribute name="menu"   value="/menu_test.jsp"/>
+      <put-attribute name="body"   value="/body_test.jsp"/>
+      <put-attribute name="footer"   value="/footer.jsp"/>
+  </definition>
+  
+  <definition name="testSeries" extends="baseLayout_test">
+      <put-attribute name="title"  value="Test"/>
+      <put-attribute name="body"   value="/testSeries.jsp"/>      
+  </definition>
+  
+   <definition name="testStart" extends="baseLayout_test">
+      <put-attribute name="title"  value="Test"/>
+      <put-attribute name="body"   value="/testStart.jsp"/>      
+  </definition>
+  
+  <definition name="baseLayout_mockinterviews" template="/baseLayout_mockinterviews.jsp">
+      <put-attribute name="title"  value="Template"/>
+      <put-attribute name="header" value="/header.jsp"/>
+      <put-attribute name="menu"   value="/menu_mockinterviews.jsp"/>
+      <put-attribute name="body"   value="/mockInterviews.jsp"/>
+      <put-attribute name="footer"   value="/footer.jsp"/>
+  </definition>
+  
+   <definition name="mockInterviews" extends="baseLayout_mockinterviews">
+      <put-attribute name="title"  value="Sections"/>
+      <put-attribute name="body"   value="/mockInterviews.jsp"/>      
+  </definition>
+  
+   <definition name="mockInterviewVideos" extends="baseLayout_mockinterviews">
+      <put-attribute name="title"  value="Mock"/>
+      <put-attribute name="body"   value="/mockInterviewVideos.jsp"/>      
+  </definition>
+  
+  <definition name="sections" extends="baseLayout">
+      <put-attribute name="title"  value="Sections"/>
+      <put-attribute name="body"   value="/sections.jsp"/>      
+  </definition>
+  
+  <definition name="section_video" extends="baseLayout">
+      <put-attribute name="title"  value="Section_video"/>
+      <put-attribute name="body"   value="/section_video.jsp"/>      
+  </definition>
+  <definition name="topics" extends="baseLayout">
+      <put-attribute name="title"  value="Topics"/>
+      <put-attribute name="body"   value="/topics.jsp"/>      
+  </definition>
+  
+   <definition name="topics_video" extends="baseLayout">
+      <put-attribute name="title"  value="Topics_video"/>
+      <put-attribute name="body"   value="/topics_video.jsp"/>      
+  </definition>
+  
+   <definition name="topics_content" extends="baseLayout">
+      <put-attribute name="title"  value="Topics_content"/>
+      <put-attribute name="body"   value="/topics_content.jsp"/>      
+  </definition>
+  
+   <definition name="topics_examples" extends="baseLayout">
+      <put-attribute name="title"  value="Topics_examples"/>
+      <put-attribute name="body"   value="/topics_examples.jsp"/>      
+  </definition>
+  
+   <definition name="topics_exercise" extends="baseLayout">
+      <put-attribute name="title"  value="Topics_exercise"/>
+      <put-attribute name="body"   value="/topics_exercise.jsp"/>      
+  </definition>
+  
+ 
+  
+  
+  
+</tiles-definitions>

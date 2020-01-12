@@ -1,0 +1,337 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <constant name="struts.enable.DynamicMethodInvocation" value="true" />
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+    <constant name="struts.multipart.maxSize" value="104857600" />
+   
+	
+    <package name="default" extends="struts-default" namespace="/">
+    
+   		<action name="userLoginProcess" class="com.styrish.users.action.UserLoginAction" method = "execute">
+            <result name="success">homePage.jsp</result>
+            <result name="input">userLogin.jsp</result>
+        </action>
+        
+        <action name="logout" class="com.styrish.users.action.UserLogoutAction" method="logout">
+			<result name="LOGOUT">homePage.jsp</result>
+		</action>
+		<action name="userRegistration"  class="com.styrish.users.action.UserRegistrationAction"  method = "execute">
+			<result name="success">UserRegistrationSuccess.jsp</result>
+			<result name="input">userRegistration.jsp</result>
+	   </action>
+	   
+	   <action name="userAddressAction"  class="com.styrish.users.action.UserAddressAction"  method = "execute">
+			<result name="success">tutorPanelMain.jsp</result>
+			<result name="input">AddressAdd.jsp</result>
+	   </action>
+	   
+		 <action name="courses" class="com.styrish.courses.action.CourseAction" method="execute">
+			<result name="success">courseDetails.jsp</result>
+		</action>
+		 <action name="courseTopicComponent" class="com.styrish.courses.action.CourseTopicComponentAction" method="execute">
+			<result name="success">courseTopicComponent.jsp</result>
+		</action>
+		
+		 <action name="tutorMockTestCreateAction" class="com.styrish.mocktest.action.TutorMockTestCreateAction" method="execute">
+		     <result name="success">tutorMockTestDisplay.jsp</result>
+		</action>
+		 <action name="tutorMockTestQuestionsAction" class="com.styrish.mocktest.action.TutorMockTestQuestionsAction" method="execute">
+		     <result name="success">tutorMockTestAddQuestions.jsp</result>
+		</action>
+		
+		<action name="tutorMockTestAddQuestionsAction" class="com.styrish.mocktest.action.TutorMockTestAddQuestionsAction" method="execute">
+		     <result name="success">tutorMockTestDisplay.jsp</result>
+		</action>
+		
+	     <action name="tutorMockTestEditQuestionsAction"  class="com.styrish.mocktest.action.TutorMockTestEditQuestionsAction"  method = "execute">
+	        <result name="success">tutorMockTestEditQuestions.jsp</result>
+		 </action>
+		 
+		 <action name="tutorMockTestUpdateQuestionsAction"  class="com.styrish.mocktest.action.TutorMockTestUpdateQuestionsAction"  method = "execute">
+	        <result name="success">tutorMockTestDisplay.jsp</result>
+		 </action>
+		 <action name="tutorMockTestDeleteQuestionsAction"  class="com.styrish.mocktest.action.TutorMockTestDeleteQuestionsAction"  method = "execute">
+	        <result name="success">tutorMockTestDisplay.jsp</result>
+		 </action>
+	    <action name="tutorMockTestFinalizeAction"  class="com.styrish.mocktest.action.TutorMockTestFinalizeAction"  method = "execute">
+	        <result name="success">tutorMockTestResult.jsp</result>
+		 </action>
+		 
+		  <action name="tutorMockTestDetailsAction"  class="com.styrish.mocktest.action.TutorMockTestDetailsAction"  method = "execute">
+	        <result name="success">tutorMockTestDetails.jsp</result>
+		 </action>
+		 
+	     <action name="topicUploadContentAction" class="com.styrish.courses.topics.action.TopicUploadContentAction">
+			
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">1020971520</param>
+				<param name="allowedTypes">
+					image/png,image/gif,image/jpeg,image/pjpeg,application/msword,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain,application/pdf
+				</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success">tutorTopicContentUpload.jsp</result>
+			<result name="input">tutorTopicContentUpload.jsp</result>
+			
+		</action>
+		
+		
+	 <action name="topicUploadVideoAction" class="com.styrish.courses.topics.action.TopicUploadVideoAction">
+         <interceptor-ref name="fileUpload">
+         <param name="allowedTypes">video/x-ms-wmv,video/x-ms-avi,
+         video/fli,video/x-fli,video/x-atomic3d-feature,video/gl,video/x-gl,video/x-isvideo,video/mpeg,video/x-motion-jpeg,video/quicktime,video/x-sgi-movie,
+         video/x-mpeg,video/vnd.rn-realvideo,video/x-scm,video/mp4</param>
+         <param name="maximumSize">1073741824</param>
+         </interceptor-ref>
+         <interceptor-ref name="validation">
+        <param name="excludeMethods">input,back,cancel,browse</param>
+        </interceptor-ref>
+        <interceptor-ref name="workflow">
+        <param name="excludeMethods">input,back,cancel,browse</param>
+       </interceptor-ref>
+        <interceptor-ref name="basicStack"/>
+       <result name="success">/tutorTopicVideoUpload.jsp</result>
+      
+     </action>
+     
+     
+      <action name="topicDisplayDetailsAction"  class="com.styrish.courses.topics.action.TopicDisplayDetailsAction"  method = "execute">
+	        <result name="success">tutorTopicDisplayDetails.jsp</result>
+		 </action>
+		 
+		<action name="topicAddAction"  class="com.styrish.courses.topics.action.TopicCreateAction"  method = "execute">
+	        <result name="success">tutorTopicCreate.jsp</result>
+		 </action>
+		 
+		 <action name="topicCreateAction"  class="com.styrish.courses.topics.action.TopicCreateAction"  method = "execute">
+	        <result name="success">tutorTopicCreatedResult.jsp</result>
+		 </action>
+		 
+		  <action name="topicEditAction"  class="com.styrish.courses.topics.action.TopicEditAction"  method = "execute">
+	        <result name="success">tutorTopicEdit.jsp</result>
+		 </action>  
+		 <action name="topicUpdateAction"  class="com.styrish.courses.topics.action.TopicUpdateAction"  method = "execute">
+	        <result name="success">tutorTopicCreatedResult.jsp</result>
+		 </action>
+		 		 <action name="topicDeleteAction"  class="com.styrish.courses.topics.action.TopicDeleteAction"  method = "execute">
+	        <result name="success">tutorTopicCreatedResult.jsp</result>
+		 </action>
+		 
+		 <action name="topicCreateContentAction" class="com.styrish.courses.topics.action.TopicCreateContentAction">
+		 <result name="success">tutorTopicContentCreatedSuccess.jsp</result>
+		</action>
+		
+		 <action name="topicCreateExerciseAction" class="com.styrish.courses.topics.action.TopicCreateExerciseAction">
+		 <result name="success">tutorTopicExerciseAdd.jsp</result>
+		</action>
+		
+		 <action name="topicEditExerciseAction" class="com.styrish.courses.topics.action.TopicEditExerciseAction">
+		 <result name="success">tutorTopicExerciseEdit.jsp</result>
+		</action>
+		
+		 <action name="topicUpdateExerciseAction" class="com.styrish.courses.topics.action.TopicUpdateExerciseAction">
+		 <result name="success">tutorTopicExerciseAdd.jsp</result>
+		</action>
+		
+		 <action name="topicDeleteExerciseAction" class="com.styrish.courses.topics.action.TopicDeleteExerciseAction">
+		 <result name="success">tutorTopicExerciseAdd.jsp</result>
+		</action>
+		
+		<action name="createTopicAction" method="createtopic"  class="com.styrish.courses.topics.action.ContentPanelAction">
+		 <result name="success">tutorTopicCreatedResult.jsp</result>
+		</action>
+		
+		<action name="createContentAction" method="createcontent"  class="com.styrish.courses.topics.action.ContentPanelAction">
+		 <result name="success">tutorTopicContentCreate.jsp</result>
+		</action>
+		
+		<action name="uploadContentAction" method="uploadcontent"  class="com.styrish.courses.topics.action.ContentPanelAction">
+		 <result name="success">tutorTopicContentUpload.jsp</result>
+		</action>
+		<action name="createVideoAction" method="createvideo"  class="com.styrish.courses.topics.action.ContentPanelAction">
+		 <result name="success">tutorTopicVideoUpload.jsp</result>
+		</action>
+		<action name="createExerciseAction" method="createexercise"  class="com.styrish.courses.topics.action.ContentPanelAction">
+		 <result name="success">tutorTopicExerciseAdd.jsp</result>
+		</action>
+		
+		<action name="coursePacksAction" class="com.styrish.courses.packs.action.CoursePacksAction">
+		 <result name="success">coursePacksDisplay.jsp</result>
+		</action>
+		<action name="mockTestPacksAction" class="com.styrish.courses.packs.action.MockTestPacksAction">
+		 <result name="success">MockTestPacksDisplay.jsp</result>
+		</action>
+		<action name="mockTestPacksDetailAction" class="com.styrish.courses.packs.action.MockTestPacksDetailAction">
+		 <result name="success">MockTestPacksDisplayDetails.jsp</result>
+		</action>
+		
+		<action name="mockInterviewPacksAction" class="com.styrish.courses.packs.action.MockInterviewPacksAction">
+		 <result name="success">MockInterviewPacksDisplay.jsp</result>
+		</action>
+		<action name="mockInterviewPacksDetailAction" class="com.styrish.courses.packs.action.MockInterviewPacksDetailAction">
+		 <result name="success">MockInterviewPacksDisplayDetails.jsp</result>
+		</action>
+		
+		
+		<action name="eBookPacksAction" class="com.styrish.courses.packs.action.EBookPacksAction">
+		 <result name="success">EBookPacksDisplay.jsp</result>
+		</action>
+		<action name="eBookPacksDetailAction" class="com.styrish.courses.packs.action.EBookPacksDetailAction">
+		 <result name="success">EBookPacksDisplayDetails.jsp</result>
+		</action>
+		
+		<action name="productDetailAction" class="com.styrish.courses.product.action.ProductDetailAction">
+		 <result name="success">courseProductDetails.jsp</result>
+		</action>
+		
+		<action name="tutorPanelAction" class="com.styrish.tutor.action.TutorPanelAction">
+		 <result name="success">tutorPanelMain.jsp</result>
+		</action>
+		
+		 <action name="tutorMockVideoUploadAction" class="com.styrish.mockvideo.action.TutorMockVideoUploadAction">
+         <interceptor-ref name="fileUpload">
+         <param name="allowedTypes">video/x-ms-wmv,video/x-ms-avi,
+         video/fli,video/x-fli,video/x-atomic3d-feature,video/gl,video/x-gl,video/x-isvideo,video/mpeg,video/x-motion-jpeg,video/quicktime,video/x-sgi-movie,
+         video/x-mpeg,video/vnd.rn-realvideo,video/x-scm,video/mp4</param>
+         <param name="maximumSize">1073741824</param>
+         </interceptor-ref>
+         <interceptor-ref name="validation">
+        <param name="excludeMethods">input,back,cancel,browse</param>
+        </interceptor-ref>
+        <interceptor-ref name="workflow">
+        <param name="excludeMethods">input,back,cancel,browse</param>
+       </interceptor-ref>
+        <interceptor-ref name="basicStack"/>
+       <result name="success">/tutorMockVideoMain.jsp</result>
+       <result name="input">/tutorMockVideoMain.jsp</result>
+     </action>
+     
+     
+      <action name="tutorEBookUploadAction" class="com.styrish.ebook.action.TutorEBookUploadAction">
+      
+         <interceptor-ref name="fileUpload">
+				<param name="maximumSize">1020971520</param>
+				<param name="allowedTypes">
+					image/png,image/gif,image/jpeg,image/pjpeg,application/msword,application/vnd.ms-excel,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain,application/pdf
+				</param>
+	    </interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success">tutorEbookMain.jsp</result>
+     
+     </action>
+     
+     <!-- Student module -->
+		<action name="studentMockTestPaperAction" class="com.styrish.student.action.StudentMockTestPaperAction">
+		 <result name="success">StudentMockTestPaper.jsp</result>
+		</action> 
+		<action name="studentMockTestPaperSubmitAction" class="com.styrish.student.action.StudentMockTestPaperSubmitAction">
+		 <result name="success">StudentMockTestPaperResult.jsp</result>
+		</action> 
+		
+		<action name="shoppingCartDetailAction" class="com.styrish.shopping.action.ShoppingCartDetailAction">
+		   <result name="success">shoppingCartDetail.jsp</result>
+		</action>
+		
+		<action name="contactUsAction" class="com.styrish.footer.action.ContactUsAction">
+           <result name="success">contactUsSuccess.jsp</result>
+        </action>
+		
+		<action name="orderRefreshAndInitiatePaymentAction" class="com.styrish.shopping.action.OrderRefreshAndInitiatePaymentAction" method = "execute">
+		   <result name="success" type="redirect">${URL}</result>
+		</action>
+		
+		<action name="orderPaymentCallBackAction" class="com.styrish.shopping.action.OrderPaymentCallBackAction">
+		   <result name="success" type="redirect">${URL}</result>
+		</action>
+		
+    </package>
+    
+     <!-- Ajax actions for styrish -->	
+    
+    <package name="default-json" extends="json-default" namespace="/ajax">
+       
+        <action name="AjaxOrderItemAddAction" class="com.styrish.shopping.action.OrderItemAddAction">
+		    <result name="success" type="json"/>
+		</action>
+		
+		<action name="AjaxOTPLoginAction" class="com.styrish.users.action.UserOTPLoginAction">
+		    <result name="success" type="json"/>
+		</action>
+		
+		<action name="AjaxAccountLoginAction" class="com.styrish.users.action.AjaxUserLoginAction">
+		    <result name="success" type="json"/>
+		    <result name="input" type="json"/>
+		</action>
+		
+		<action name="AjaxTeachersAccountLoginAction" class="com.styrish.users.teacherpanel.action.AjaxTeachersLoginAction">
+		    <result name="success" type="json"/>
+		    <result name="input" type="json"/>
+		</action>
+		<action name="AjaxAccountRegisterAction" class="com.styrish.users.action.AjaxUserRegistrationAction">
+		    <result name="success" type="json"/>
+		    <result name="input" type="json"/>
+		</action>
+		
+		<action name="AjaxOrderItemDeleteAction" class="com.styrish.shopping.action.OrderItemDeleteAction">
+		     <result name="success" type="json"/>
+		</action>
+		
+		<action name="AjaxGetSubjectsByCourse" class="com.styrish.courses.subjects.actions.GetSubjectsByCourseAction">
+		     <result name="success" type="json"/>
+		</action>
+		
+		<action name="AjaxGetTopicBySubjectAndUser" class="com.styrish.courses.topics.action.GetTopicBySubjectAndUserAction">
+		     <result name="success" type="json"/>
+		</action>
+		
+		<action name="AjaxUploadContentAction" class="com.styrish.courses.topics.teacherpanel.action.contents.upload.TopicContentUploadAction">
+		    
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">1020971520</param>
+				<param name="allowedTypes">
+					image/png,image/gif,image/jpeg,image/pjpeg,application/msword,application/vnd.ms-excel
+					,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain,application/pdf,
+					video/x-ms-wmv,video/x-ms-avi,
+			         video/fli,video/x-fli,video/x-atomic3d-feature,video/gl,video/x-gl,video/x-isvideo,video/mpeg,video/x-motion-jpeg,video/quicktime,video/x-sgi-movie,
+			         video/x-mpeg,video/vnd.rn-realvideo,video/x-scm,video/mp4
+				</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<param name="filesPath">C://NewTemp1//</param>
+			 <result name="success" type="json"/>
+		     <result name="error" type="json"/>
+		     <result name="input" type="json">
+		        <param name="ignoreHierarchy">false</param>
+                <param name="includeProperties">^actionErrors\[\d+\],^fieldErrors\['\w+'\]\[\d+\]</param>
+		     </result>
+		</action>
+		
+		<action name="AjaxApproveContentAction" class="com.styrish.courses.topics.teacherpanel.action.contents.upload.TopicContentApproveAction">
+		    <result name="success" type="json"/>
+		     <result name="error" type="json"/>
+		     <result name="input" type="json">
+		        <param name="ignoreHierarchy">false</param>
+                <param name="includeProperties">^actionErrors\[\d+\],^fieldErrors\['\w+'\]\[\d+\]</param>
+		     </result>
+		</action>
+	
+		
+	 </package>
+	 
+	 <package name="teachers-struts-default" extends="struts-default" namespace="/TeacherPanel">
+	  
+		<!--  Actions for Teacher Panel -->
+		<action name="TeacherBaseAction" class="com.styrish.users.teacherpanel.action.TeachersBaseAction">
+		   <result name="success" type="redirect">${URL}</result>
+		</action>
+	 
+	 </package>
+	 
+	
+	
+</struts>
